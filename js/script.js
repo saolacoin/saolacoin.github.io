@@ -9,7 +9,7 @@ var PARAMS = {
 		maxFee: 0.2,
 		txFee: 0.002,
 		precision: 8,
-		explorer: 'http://saolacoin.com/',
+		explorer: 'http://47.245.10.71/',
 		donation: 'SjfezBL1ewr11KtmGFhCbedK9C8uWEa3X1',
 		unspentApi: 'http://47.245.10.71/ext/holdbalance/',
 		sendApi: 'http://47.245.10.71/ext/pushtx/',
@@ -92,7 +92,7 @@ var PARAMS = {
 
 $(function() {
     $.ajax({
-          url: 'http://saolacoin.com/ext/info',
+          url: 'http://47.245.10.71/ext/info',
           cache: false
     }).done(function(result) {
           hodlBestRate = result.hodlbestrate;
