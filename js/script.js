@@ -547,7 +547,7 @@ function spendf() {
      tx.addInput(utxos[i][PARAMS[CURRENT_COIN].unspentTxid], utxos[i][PARAMS[CURRENT_COIN].unspentOutput]);
   }
  $.ajax({
-  url: 'http://saolacoin.com/ext/info',
+  url: 'http://47.245.10.71/ext/info',
   type: "GET",
   dataType: "json",
   data: {
