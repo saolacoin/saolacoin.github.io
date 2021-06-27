@@ -9,16 +9,18 @@ var PARAMS = {
 		maxFee: 0.2,
 		txFee: 0.002,
 		precision: 8,
-		explorer: 'http://47.245.10.71/',
+		explorer: 'https://www.saolacoin.com/',
 		donation: 'SjfezBL1ewr11KtmGFhCbedK9C8uWEa3X1',
-		unspentApi: 'http://47.245.10.71/ext/holdbalance/',
-		sendApi: 'http://47.245.10.71/ext/pushtx/',
-		sendTxHex: 'tx_hex',
-		sendTxid1: 'txid',
-		unspentTxid: 'txid',
-		unspentOutput: 'output',
-		unspentValue: 'balance',
-		unspentDivision: 1
+		unspentApi: 'https://www.saolacoin.com/ext/holdbalance/',
+		sendApi: 'https://www.saolacoin.com/ext/pushtx/',
+		sendTxHex: 'data',
+		sendTxid1: 'data',
+		sendTxid2: 'transaction_hash',
+		unspentArray1: 'txrefs',
+		unspentTxid: 'tx_hash',
+		unspentOutput: 'tx_output_n',
+		unspentValue: 'value',
+		unspentDivision: 100000000
 	},
 
 	'BTC': {
@@ -92,7 +94,7 @@ var PARAMS = {
 
 $(function() {
     $.ajax({
-          url: 'http://47.245.10.71/ext/info',
+          url: 'https://www.saolacoin.com/ext/info',
           cache: false
     }).done(function(result) {
           hodlBestRate = result.hodlbestrate;
@@ -547,7 +549,7 @@ function spendf() {
      tx.addInput(utxos[i][PARAMS[CURRENT_COIN].unspentTxid], utxos[i][PARAMS[CURRENT_COIN].unspentOutput]);
   }
  $.ajax({
-  url: 'http://47.245.10.71/ext/info',
+  url: 'https://www.saolacoin.com/ext/info',
   type: "GET",
   dataType: "json",
   data: {
@@ -600,7 +602,6 @@ function spendf() {
   for (i=0; i<utxos.length; i++) {
     tx.sign(i, keyPair);
   }
-
   $.ajax({
     url: PARAMS[CURRENT_COIN].sendApi,
     type: "POST",
