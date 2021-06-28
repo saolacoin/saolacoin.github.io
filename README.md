@@ -19,7 +19,7 @@ Bitcoin, Litecoin and Dogecoin transactions are created and signed locally and t
 You can login with a SaolaCoin, Bitcoin, Litecoin or Dogecoin private key. If you login with a SaolaCoin private key, the wallet will generate a Bitcoin, Litecoin and Dogecoin address using your SaolaCoin private key. If you login with a Bitcoin private key, the wallet will generate a SaolaCoin, Litecoin and Dogecoin address using your Bitcoin private key. And so will be the case if you login with a Litecoin or Dogecoin private key. It is however highly recommended to use email and password to login if you intend to stash all your cryptos in the same wallet per se, and only use the login with private key feature to spend your paper or brain wallets.
 
 # Transaction Fees
-The wallet enforces a minimum of `0.002 SAOLA`, `0.0001 BTC`, `0.001 LTC` and `1 DOGE` transaction fees and allows users to increase this fee. To help avoid situations in which ridiculously high fees are paid by accident, the wallet enforces a maximum of `0.2 SAOLA`, `0.01 BTC`, `0.1 LTC` and `100 DOGE` transaction fees.
+The wallet enforces a minimum of `0 SAOLA`, `0.0001 BTC`, `0.001 LTC` and `1 DOGE` transaction fees and allows users to increase this fee. To help avoid situations in which ridiculously high fees are paid by accident, the wallet enforces a maximum of `0.1 SAOLA`, `0.01 BTC`, `0.1 LTC` and `100 DOGE` transaction fees.
 
 # Change Addresses
 By default, all changes are sent back to the sender's address. To specify a custom change address, click on the vial icon. You need to specify a custom change address everytime you login or switch between different coins, to override the default behavior.
